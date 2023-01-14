@@ -1,0 +1,51 @@
+<div class="header">
+    <h1 class="text-center pt-4 pb-4">Employee Assignment</h1>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-right mb-4 create-btn">
+            <button mat-raised-button color="primary" (click)="openActionDialog('add', {})">Create</button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-3" [ngClass]="{'profile-card-first': i == 0}" *ngFor="let emp of employees; let i=index;">
+            <mat-card class="example-card">
+                <mat-card-header class="justify-content-center">
+                    <mat-card-title>
+                        <img mat-card-image src="../../../assets/images/{{ emp.profileIcon }}" alt="">
+                    </mat-card-title>
+                    <mat-card-subtitle (click)="openActionDialog('update', emp)">{{ emp.fname }} {{ emp.lname }}</mat-card-subtitle>
+                </mat-card-header>
+                <hr>
+                <mat-card-content>
+                    <table>
+                        <tr>
+                            <th>Department</th>
+                            <th>:</th>
+                            <td>{{ emp.dept }}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <th>:</th>
+                            <td>{{ emp.emailId }}</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <th>:</th>
+                            <td>{{ emp.dob | dateChange }}</td>
+                        </tr>
+                    </table>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="openActionDialog('update', emp)">
+                        <span><i class="fas fa-pen" aria-hidden="false"></i></span>
+                    </button>
+                    <button mat-button (click)="openActionDialog('delete', emp)">
+                        <span><i class="far fa-trash-alt" aria-hidden="false"></i></span>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

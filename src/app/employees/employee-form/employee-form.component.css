@@ -1,0 +1,45 @@
+.add-title {
+    color: #3f51b5;
+}
+
+.cdk-overlay-pane.my-dialog {
+    position: relative !important;
+}
+
+.close.mat-button {
+    position: none;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;
+    font-size: 20px;
+    color: #292921;
+    font-weight: bold;
+}
+
+.mat-dialog-title {
+    margin: 0 20px 20px !important;
+}
+
+.mat-dialog-content {
+    margin: 0 !important;
+    /* padding: 0 !important; */
+    height: 100% auto !important;
+    max-height: 75vh !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+}
+
+.mat-form-field {
+    display: block !important;
+}
+
+.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
+    width: auto !important;
+}
+
+.mat-dialog-actions {
+    display: flex !important;
+    justify-content: space-between !important;
+}

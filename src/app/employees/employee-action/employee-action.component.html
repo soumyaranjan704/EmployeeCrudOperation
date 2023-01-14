@@ -1,0 +1,12 @@
+<div class="container mat-dialog-content-action">
+    <div class="row pb-3">
+        <div class="col-md-12">
+            <p>Are you sure, want to delete the employee?</p>
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <!-- [mat-dialog-close]="data.action" cdkFocusInitial -->
+        <button mat-raised-button color="warn" (click)="deleteEmployee()">Proceed</button>
+        <button mat-raised-button color="primary" (click)="onNoClick(false)">Cancel</button>
+    </div>
+</div>
